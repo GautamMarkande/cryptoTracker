@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    position: fixed;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 60px;
+    box-shadow: 1px 1px 4px gray;
+    background-color: black;
+    
+}
+header h1{
+    margin-left: 50px;
+}
+
+.navbar_links{
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+.navbar_links a{
+    text-decoration: none;
+    color: gray;
+    padding: 10px;
+}
+.navbar_links a:hover{
+    background-color: rgb(0, 149, 255);
+    border-radius: 25px;
+    color:white
+}
+section{
+    margin-top: 100px;
+} 
+.grid_and_list_text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    gap: 5px;
+    color: gray;
+}
+.grid_and_list_text .grid,.list
+{
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid rgb(0, 149, 255);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 30px;
+    gap: 20px;
+    padding: 0 50px;
+}
+.name_id_container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+} 
+.name_id_container .crypto_id{
+    text-transform: uppercase;
+}
+.name_id_container .crypto_name{
+    color: gray;
+    font-size: 15px;
+}
+.change_percentage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(22, 158, 22);
+    border-radius: 25px;
+    width: 40px;
+    height: 20px;
+    padding: 4px 20px;
+    color: rgb(22, 158, 22);
+    font-size:20px ;
+    font-weight: 500;
+   
+}
+.curr_price{
+    color: rgb(22, 158, 22);
+    font-size:20px ;
+    font-weight: 500;
+    padding: 10px;
+}
+.total_vol,.cap{
+    color: gray;
+    padding: 10px;
+}
+.card_container{
+    background-color: #1B1B1B;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.log_and_name_container{
+    display: flex;
+    align-items: center;
+}
+.log_and_name_container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.list_container{
+    background-color: #1B1B1B;
+    padding: 10px 0px;
+}
+.list_card{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+    border-radius: 10px;
+}
+.list_card_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 50px;
+}
+@media screen and (max-width:475px) {
+    .list_card{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3,1fr);
+        text-align: center;
+        border-radius: 10px;
+    }
+    .total_vol,.cap{
+        display: none;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 30px;
+        gap: 20px;
+        padding: 0 50px;
+    }
+    
+}
